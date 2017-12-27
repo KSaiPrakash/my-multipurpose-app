@@ -2,16 +2,22 @@
   <div id="header">
     <div class="wrap group">
       <div class="head-wrap group">
-        <nav>
+        <!-- <nav> -->
           <div id="back_active" style="left: 0px;">
-            <ul> 
-              <li>
-                <a > Login </a>
-              </li>
-            </ul>
+            <!-- <ul>  -->
+              <!-- <li> -->
+                <span (click)="showDialog = !showDialog"> Login </span>
+              <!-- </li> -->
+            <!-- </ul> -->
           </div>
-        </nav>
+        <!-- </nav> -->
       </div>
     </div> 
   </div>
 </div>
+
+
+<app-dialog [(visible)]="showDialog">
+  <h1>Login : </h1>
+  <button (click)="showDialog = !showDialog" class="btn">Close</button>
+</app-dialog>
