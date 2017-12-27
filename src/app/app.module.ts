@@ -1,5 +1,7 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule,  } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 // Components
 import { AppComponent } from './app.component';
@@ -20,6 +22,9 @@ import { AuthenticationService } from './services/login-service';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    NoopAnimationsModule
   ],
   providers: [AuthenticationService],
   bootstrap: [AppComponent]

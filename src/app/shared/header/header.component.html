@@ -18,6 +18,21 @@
 
 
 <app-dialog [(visible)]="showDialog">
-  <h1>Login : </h1>
+    <form novalidate #form1="ngForm" (ngSubmit)="handleLogin(loginFormCtrl, form1.value)">
+        <fieldset ngModelGroup="loginForm" #loginFormCtrl="ngModelGroup" >
+             <div class="row">
+            <div class="col-sm-11">
+          <div class="form-group">
+            <label for="email">Email <span class="required text-primary">*</span>
+                              </label>
+            <input required type="email" 
+                   class="form-control input-xl" 
+                   id="email" 
+                   placeholder="Email"
+                   name="email"
+                   maxlength="128"
+                   />
+                   </div></div></div></fieldset>
+                   </form>
   <button (click)="showDialog = !showDialog" class="btn">Close</button>
 </app-dialog>
