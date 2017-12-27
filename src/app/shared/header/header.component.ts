@@ -10,6 +10,7 @@ import * as moment from 'moment';
 export class HeaderComponent implements OnInit, OnChanges {
 
   public time;
+  showDialog = false;
 
   constructor() { }
 
